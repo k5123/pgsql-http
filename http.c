@@ -1003,6 +1003,7 @@ Datum http_set_curlopt(PG_FUNCTION_ARGS)
 		{
 			if (opt->curlopt_val) pfree(opt->curlopt_val);
 			opt->curlopt_val = MemoryContextStrdup(CacheMemoryContext, value);
+			elog(INFO, "curl option '%s' set to '%s'", curlopt, value);
 			PG_RETURN_BOOL(set_curlopt(handle, opt));
 		}
 	}
