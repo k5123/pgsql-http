@@ -28,7 +28,7 @@
  ***********************************************************************/
 
 /* Constants */
-#define HTTP_VERSION "1.6.1"
+#define HTTP_VERSION "1.6.2"
 #define HTTP_ENCODING "gzip"
 #define CURL_MIN_VERSION 0x071400 /* 7.20.0 */
 
@@ -147,10 +147,10 @@ typedef struct {
 /* CURLOPT values we allow user to set at run-time */
 /* Be careful adding these, as they can be a security risk */
 static http_curlopt settable_curlopts[] = {
-	{ "CURLOPT_HTTP_VERSION", NULL, CURLOPT_HTTP_VERSION, CURLOPT_STRING, false },
 	{ "CURLOPT_CAINFO", NULL, CURLOPT_CAINFO, CURLOPT_STRING, false },
 	{ "CURLOPT_TIMEOUT", NULL, CURLOPT_TIMEOUT, CURLOPT_LONG, false },
 	{ "CURLOPT_TIMEOUT_MS", NULL, CURLOPT_TIMEOUT_MS, CURLOPT_LONG, false },
+	{ "CURLOPT_HTTP_VERSION", NULL, CURLOPT_HTTP_VERSION, CURLOPT_STRING, false },
 	{ "CURLOPT_CONNECTTIMEOUT", NULL, CURLOPT_CONNECTTIMEOUT, CURLOPT_LONG, false },
 	{ "CURLOPT_CONNECTTIMEOUT_MS", NULL, CURLOPT_CONNECTTIMEOUT_MS, CURLOPT_LONG, false },
 	{ "CURLOPT_USERAGENT", NULL, CURLOPT_USERAGENT, CURLOPT_STRING, false },
