@@ -1007,7 +1007,7 @@ Datum http_set_curlopt(PG_FUNCTION_ARGS)
 		}
 	}
 
-	elog(ERROR, "curl option '%s' is not available for run-time configuration", curlopt);
+	elog(ERROR, "curl option '%s' is not available for run-time configuration!", curlopt);
 	PG_RETURN_BOOL(false);
 }
 
