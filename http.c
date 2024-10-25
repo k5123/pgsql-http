@@ -147,6 +147,7 @@ typedef struct {
 /* CURLOPT values we allow user to set at run-time */
 /* Be careful adding these, as they can be a security risk */
 static http_curlopt settable_curlopts[] = {
+	{ "CURLOPT_HTTP_VERSION", NULL, CURLOPT_HTTP_VERSION, CURLOPT_STRING, false },
 	{ "CURLOPT_CAINFO", NULL, CURLOPT_CAINFO, CURLOPT_STRING, false },
 	{ "CURLOPT_TIMEOUT", NULL, CURLOPT_TIMEOUT, CURLOPT_LONG, false },
 	{ "CURLOPT_TIMEOUT_MS", NULL, CURLOPT_TIMEOUT_MS, CURLOPT_LONG, false },
